@@ -1,4 +1,5 @@
 import express, { Express, Request, Response } from "express";
+import { createServer } from "http";
 import cors from "cors";
 import helmet from "helmet";
 import dotenv from "dotenv";
@@ -6,6 +7,7 @@ import swaggerUi from "swagger-ui-express";
 
 import connectDatabase from "./config/database";
 import { initSupabase } from "./config/supabase";
+import { initSocketIO } from "./config/socket";
 import swaggerSpec from "./config/swagger";
 import routes from "./routes";
 import { errorHandler } from "./middleware/errorHandler";
@@ -15,6 +17,7 @@ import logger from "./utils/logger";
 dotenv.config();
 
 const app: Express = express();
+const httpServer = createServer(app);
 const PORT = process.env.PORT || 3000;
 
 // Middleware
@@ -85,12 +88,16 @@ const startServer = async (): Promise<void> => {
     // Initialize Supabase client
     initSupabase();
 
-    app.listen(PORT, () => {
+    // Initialize Socket.IO
+    initSocketIO(httpServer);
+
+    httpServer.listen(PORT, () => {
       logger.info(`Server running on port ${PORT}`);
       logger.info(
         `API Documentation available at http://localhost:${PORT}/api/docs`,
       );
       logger.info(`Health check available at http://localhost:${PORT}/health`);
+      logger.info(`WebSocket server ready for connections`);
     });
   } catch (error) {
     logger.error(`Failed to start server: ${error}`);
