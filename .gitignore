@@ -31,6 +31,9 @@ npm-debug.log*
 # Test coverage
 coverage/
 
+# Jest cache
+.jest/
+
 # Misc
 *.tmp
 *.temp
