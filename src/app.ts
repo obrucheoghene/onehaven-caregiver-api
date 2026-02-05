@@ -4,6 +4,7 @@ import cors from "cors";
 import helmet from "helmet";
 import dotenv from "dotenv";
 import swaggerUi from "swagger-ui-express";
+import mongoose from "mongoose";
 
 import connectDatabase from "./config/database";
 import { initSupabase } from "./config/supabase";
@@ -53,11 +54,16 @@ app.get("/", (_req: Request, res: Response) => {
 
 // Health check endpoint
 app.get("/health", (_req: Request, res: Response) => {
-  res.status(200).json({
-    success: true,
+  const dbState = mongoose.connection.readyState;
+  const dbStatus = dbState === 1 ? "connected" : "disconnected";
+  const isHealthy = dbState === 1;
+
+  res.status(isHealthy ? 200 : 503).json({
+    success: isHealthy,
     data: {
-      status: "healthy",
+      status: isHealthy ? "healthy" : "unhealthy",
       timestamp: new Date().toISOString(),
+      database: dbStatus,
     },
   });
 });
