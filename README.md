@@ -71,7 +71,7 @@ SUPABASE_URL=https://your-project.supabase.co
 SUPABASE_ANON_KEY=your-supabase-anon-key
 ```
 
-**On your Supabase Dashboard Dissable Confirmation**
+**On your Supabase Dashboard Dissable Email Confirmation**
 
 ### 4. Start the Server
 
@@ -136,6 +136,7 @@ http://localhost:3000/api/docs
 
 | Method | Endpoint    | Description           |
 | ------ | ----------- | --------------------- |
+| GET    | `/`         | Base                  |
 | GET    | `/health`   | Health check          |
 | GET    | `/api/docs` | Swagger documentation |
 
@@ -169,7 +170,7 @@ Routes → Controllers → Services → Models → Database
    - Node.js EventEmitter singleton pattern
    - Events emitted: `member_added`, `member_updated`, `member_deleted`
    - Events logged to console with timestamps for demonstration
-   - Easily extensible to WebSocket for real frontend integration
+   - Integrated WebSocket (SocketIo) to emit events to frontend
 
 4. **Concurrency Handling**
    - MongoDB handles concurrent writes natively with atomic operations
@@ -232,7 +233,7 @@ Common error codes:
 ```
 onehaven-caregiver-api/
 ├── src/
-│   ├── config/          # Database, Supabase, Swagger config
+│   ├── config/          # Database, Supabase, socketio, Swagger config
 │   ├── controllers/     # Request handlers
 │   ├── events/          # Event emitter for real-time updates
 │   ├── middleware/      # Auth, validation, error handling, rate limiting
@@ -252,16 +253,35 @@ onehaven-caregiver-api/
 
 ## AI Usage Summary
 
-This project was developed with assistance from Claude Code (Anthropic's Claude). AI was used for:
+This project was developed with assistance from **Claude Code** (Anthropic's Claude Opus 4.5) and **GitHub Copilot**.
 
-- **Code Generation**: Initial boilerplate for Express routes, middleware, and Mongoose models
-- **Architecture Design**: Planning the modular folder structure and separation of concerns
-- **Documentation**: Generating JSDoc comments and Swagger annotations
-- **Best Practices**: Implementing security measures (helmet, rate limiting, input validation)
+### How AI Was Used
 
-All generated code was reviewed, tested, and customized to meet the specific requirements of the OneHaven challenge.
+| Area | Tool | Description |
+|------|------|-------------|
+| **Architecture & Planning** | Claude Code | Designed the layered architecture (routes → controllers → services → models), folder structure, and separation of concerns |
+| **Code Generation** | Claude Code | Generated initial boilerplate for Express routes, middleware, Mongoose models, and Zod validation schemas |
+| **Code Completion** | GitHub Copilot | Assisted with inline code completion and suggestions during development |
+| **Real-time Features** | Claude Code | Implemented Socket.IO WebSocket integration and SSE (Server-Sent Events) for real-time updates |
+| **Testing** | Claude Code | Created unit tests for services and validation schemas, plus integration tests for API endpoints (40 tests total) |
+| **Documentation** | Claude Code | Generated Swagger/OpenAPI annotations and this README |
+| **Security** | Claude Code | Implemented security best practices including Helmet, rate limiting, JWT authentication, and input validation |
+
+### Human Oversight
+
+All AI-generated code was:
+- **Reviewed** for correctness and security vulnerabilities
+- **Tested** manually and with automated tests
+- **Customized** to meet the specific requirements of the OneHaven challenge
+- **Iterated** based on feedback and testing results
+
+The developer maintained full control over architectural decisions, code quality standards, and final implementation choices.
 
 ## Testing
+
+```bash
+npm run test
+```
 
 To manually test the API:
 
