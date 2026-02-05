@@ -257,25 +257,24 @@ This project was developed with assistance from **Claude Code** (Anthropic's Cla
 
 ### How AI Was Used
 
-| Area | Tool | Description |
-|------|------|-------------|
-| **Architecture & Planning** | Claude Code | Designed the layered architecture (routes → controllers → services → models), folder structure, and separation of concerns |
-| **Code Generation** | Claude Code | Generated initial boilerplate for Express routes, middleware, Mongoose models, and Zod validation schemas |
-| **Code Completion** | GitHub Copilot | Assisted with inline code completion and suggestions during development |
-| **Real-time Features** | Claude Code | Implemented Socket.IO WebSocket integration and SSE (Server-Sent Events) for real-time updates |
-| **Testing** | Claude Code | Created unit tests for services and validation schemas, plus integration tests for API endpoints (40 tests total) |
-| **Documentation** | Claude Code | Generated Swagger/OpenAPI annotations and this README |
-| **Security** | Claude Code | Implemented security best practices including Helmet, rate limiting, JWT authentication, and input validation |
+| Area                    | Tool           | Description                                              |
+| ----------------------- | -------------- | -------------------------------------------------------- |
+| Architecture & Planning | Claude Code    | Layered architecture, folder structure, design patterns  |
+| Code Generation         | Claude Code    | Express routes, middleware, Mongoose models, Zod schemas |
+| Code Completion         | GitHub Copilot | Inline code completion and suggestions                   |
+| Commit Messages         | GitHub Copilot | Generated descriptive commit messages                    |
+| Testing                 | Claude Code    | Unit tests and integration tests (40 tests total)        |
+| Documentation           | Claude Code    | Swagger/OpenAPI annotations and README                   |
+| Security                | Claude Code    | Helmet, rate limiting, JWT auth, input validation        |
 
 ### Human Oversight
 
 All AI-generated code was:
+
 - **Reviewed** for correctness and security vulnerabilities
 - **Tested** manually and with automated tests
 - **Customized** to meet the specific requirements of the OneHaven challenge
 - **Iterated** based on feedback and testing results
-
-The developer maintained full control over architectural decisions, code quality standards, and final implementation choices.
 
 ## Testing
 
