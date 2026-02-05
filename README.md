@@ -110,7 +110,7 @@ Expected output on the **server console**:
 Interactive Swagger documentation is available at:
 
 ```
-http://localhost:3000/api/docs
+https://onehaven-caregiver-api.onrender.com/api/docs
 ```
 
 ## API Endpoints
