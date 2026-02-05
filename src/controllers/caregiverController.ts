@@ -49,7 +49,6 @@ export class CaregiverController {
       }
 
       const caregiver = await caregiverService.getProfile(req.caregiver.id);
-      console.log("Caregiver profile:", caregiver); // Debugging line to check caregiver data structure
       res.status(200).json({
         success: true,
         data: caregiver,
