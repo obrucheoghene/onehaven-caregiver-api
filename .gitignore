@@ -3,6 +3,10 @@ node_modules/
 
 # Build output
 dist/
+seed.js
+seed.js.map
+seed.d.ts
+seed.d.ts.map
 
 # Environment files
 .env
