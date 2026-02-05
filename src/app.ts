@@ -37,6 +37,17 @@ app.use(
   }),
 );
 
+// Base endpoint
+app.get("/", (_req: Request, res: Response) => {
+  res.status(200).json({
+    success: true,
+    data: {
+      message: "Welcome to the OneHaven Caregiver API",
+      documentation: `/api/docs`,
+    },
+  });
+});
+
 // Health check endpoint
 app.get("/health", (_req: Request, res: Response) => {
   res.status(200).json({

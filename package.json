@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Real-time caregiver management API with Node.js, Express, Supabase Auth, and MongoDB",
   "main": "dist/src/app.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "build": "tsc",
     "start": "node dist/src/app.js",
