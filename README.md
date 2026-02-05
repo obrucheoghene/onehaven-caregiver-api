@@ -257,24 +257,21 @@ This project was developed with assistance from **Claude Code** (Anthropic's Cla
 
 ### How AI Was Used
 
-| Area                    | Tool           | Description                                              |
-| ----------------------- | -------------- | -------------------------------------------------------- |
-| Architecture & Planning | Claude Code    | Layered architecture, folder structure, design patterns  |
-| Code Generation         | Claude Code    | Express routes, middleware, Mongoose models, Zod schemas |
-| Code Completion         | GitHub Copilot | Inline code completion and suggestions                   |
-| Commit Messages         | GitHub Copilot | Generated descriptive commit messages                    |
-| Testing                 | Claude Code    | Unit tests and integration tests (40 tests total)        |
-| Documentation           | Claude Code    | Swagger/OpenAPI annotations and README                   |
-| Security                | Claude Code    | Helmet, rate limiting, JWT auth, input validation        |
-
-### Human Oversight
+| Area                    | Tool           | Description                                                      |
+| ----------------------- | -------------- | ---------------------------------------------------------------- |
+| Architecture & Planning | Claude Code    | Layered architecture, folder structure, design patterns          |
+| Code Generation         | Claude Code    | Boilerplate for routes, middleware, Mongoose models, Zod schemas |
+| Code Completion         | GitHub Copilot | Inline code completion and suggestions                           |
+| Commit Messages         | GitHub Copilot | Generated descriptive commit messages                            |
+| Testing                 | Claude Code    | Unit tests and integration tests (40 tests total)                |
+| Documentation           | Claude Code    | Swagger/OpenAPI annotations and README                           |
+| Security                | Claude Code    | Helmet, rate limiting, input validation                          |
 
 All AI-generated code was:
 
 - **Reviewed** for correctness and security vulnerabilities
 - **Tested** manually and with automated tests
 - **Customized** to meet the specific requirements of the OneHaven challenge
-- **Iterated** based on feedback and testing results
 
 ## Testing
 
