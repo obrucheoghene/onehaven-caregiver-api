@@ -2,6 +2,10 @@
 
 A real-time caregiver management API built with Node.js, Express, TypeScript, Supabase Auth, and MongoDB.
 
+## Live URL
+
+https://onehaven-caregiver-api.onrender.com/
+
 ## Overview
 
 This API enables caregivers to:
