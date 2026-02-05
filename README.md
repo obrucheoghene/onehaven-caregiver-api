@@ -39,7 +39,7 @@ This API enables caregivers to:
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/obrucheoghene/onehaven-caregiver-api.git
 cd onehaven-caregiver-api
 ```
 
@@ -70,6 +70,8 @@ MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/onehaven
 SUPABASE_URL=https://your-project.supabase.co
 SUPABASE_ANON_KEY=your-supabase-anon-key
 ```
+
+**On your Supabase Dashboard Dissable Confirmation**
 
 ### 4. Start the Server
 
