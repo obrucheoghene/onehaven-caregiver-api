@@ -6,7 +6,7 @@
  * 2. Adding 3 protected members concurrently
  * 3. Logging emitted real-time events
  *
- * Usage: npx ts-node seed.ts
+ * Usage: npm run seed
  *
  * Note: Make sure the server is running before executing this script
  */
