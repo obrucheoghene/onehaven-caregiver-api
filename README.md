@@ -6,6 +6,10 @@ A real-time caregiver management API built with Node.js, Express, TypeScript, Su
 
 https://onehaven-caregiver-api.onrender.com/
 
+## Video Demo URL
+
+https://www.loom.com/share/867642a1536141fd97993d9f2b5e2b6d
+
 ## Overview
 
 This API enables caregivers to:
@@ -109,9 +113,7 @@ Expected output on the **server console**:
 
 Interactive Swagger documentation is available at:
 
-```
 https://onehaven-caregiver-api.onrender.com/api/docs
-```
 
 ## API Endpoints
 
@@ -151,7 +153,7 @@ Routes → Controllers → Services → Models → Database
            ↓
        Middleware (Auth, Validation, Rate Limiting)
            ↓
-      Event Emitter (Real-time logging)
+      Event Emitter (Real-time logging, webbocket event broadcasting)
 ```
 
 ### Key Design Decisions
@@ -253,7 +255,7 @@ onehaven-caregiver-api/
 
 ## AI Usage Summary
 
-This project was developed with assistance from **Claude Code** (Anthropic's Claude Opus 4.5) and **GitHub Copilot**.
+This project was developed with assistance from **Claude Code** and **GitHub Copilot**.
 
 ### How AI Was Used
 
@@ -265,7 +267,6 @@ This project was developed with assistance from **Claude Code** (Anthropic's Cla
 | Commit Messages         | GitHub Copilot | Generated descriptive commit messages                   |
 | Testing                 | Claude Code    | Unit tests and integration tests (40 tests total)       |
 | Documentation           | Claude Code    | Swagger/OpenAPI annotations and README                  |
-| Security                | Claude Code    | Helmet, rate limiting, input validation                 |
 
 All AI-generated code was:
 
