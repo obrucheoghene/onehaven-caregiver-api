@@ -10,6 +10,8 @@ https://onehaven-caregiver-api.onrender.com/
 
 https://www.loom.com/share/867642a1536141fd97993d9f2b5e2b6d
 
+<img width="1512" height="903" alt="Screenshot 2026-02-06 at 9 48 22 AM" src="https://github.com/user-attachments/assets/21f328d9-48ac-40c2-b004-029b0d3ce140" />
+
 ## Overview
 
 This API enables caregivers to:
