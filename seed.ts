@@ -1,5 +1,5 @@
 /**
- * Seed Script - Execution Harness
+ * Seed Script
  *
  * This script demonstrates:
  * 1. Creating a sample caregiver
